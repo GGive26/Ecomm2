@@ -43,7 +43,7 @@ session_start();
 
     ?>
 
-        <form action="./editProfil.php" method="post">
+        <form action="../controllers/UserController.php" method="post">
             <fieldset>
                 <center>
                     <legend> <?php echo "<h1>  SALUT  ... <mark>" . $_SESSION['auth']['nom'] . " - " . $_SESSION['auth']['prenom'] . "</mark>...</h1>"; ?></legend>
@@ -51,22 +51,22 @@ session_start();
                 <div class="container">
                     <div>
                         <label for="lname">Nom : </label>
-                        <input id="lname" type="text" name="nomUpdate" value="<?php echo $_SESSION['auth']['nom'] ?>">
+                        <input id="lname" type="text" name="nomUpdate" value="<?php echo $_SESSION['auth']['nom'] ?>" required>
                     </div>
                     <div>
                         <label for="fname">Prenom : </label>
-                        <input id="fname" type="text" name="prenom" value="<?php echo $_SESSION['auth']['prenom'] ?>">
+                        <input id="fname" type="text" name="prenomUpdate" value="<?php echo $_SESSION['auth']['prenom'] ?>" required>
 
                     </div>
 
                     <div>
                         <label for="email">Courriel</label>
-                        <input id="email" type="text" name="email" value="<?php echo $_SESSION['auth']['email'] ?>">
+                        <input id="email" type="text" name="emailUpdate" value="<?php echo $_SESSION['auth']['email'] ?>" required>
 
                     </div>
                     <div>
                         <label for="fname">Password : </label>
-                        <input id="fname" type="text" name="password" value="<?php echo $_SESSION['auth']['password'] ?>">
+                        <input id="fname" type="text" name="passwordUpdate" value="<?php echo $_SESSION['auth']['password'] ?>" required>
 
                     </div>
                 </div>
@@ -76,7 +76,7 @@ session_start();
     } else if (isset($_SESSION['login'])) {
         ?>
 
-            <form action="./editProfil.php" method="post">
+            <form action="../controllers/UserController.php" method="post">
                 <fieldset>
                     <center>
                         <legend> <?php echo "<h1>  SALUT  ... <mark>" . $_SESSION['login']['nom'] . " - " . $_SESSION['login']['prenom'] . "</mark>...</h1>"; ?></legend>
@@ -84,22 +84,22 @@ session_start();
                     <div class="container">
                         <div>
                             <label for="lname">Nom : </label>
-                            <input id="lname" type="text" name="nomUpdate" value="<?php echo $_SESSION['login']['nom'] ?>">
+                            <input id="lname" type="text" name="nomUpdate" value="<?php echo $_SESSION['login']['nom'] ?>" required>
                         </div>
                         <div>
                             <label for="fname">Prenom : </label>
-                            <input id="fname" type="text" name="prenom" value="<?php echo $_SESSION['login']['prenom'] ?>">
+                            <input id="fname" type="text" name="prenomUpdate" value="<?php echo $_SESSION['login']['prenom'] ?>" required>
 
                         </div>
 
                         <div>
                             <label for="email">Courriel</label>
-                            <input id="email" type="text" name="email" value="<?php echo $_SESSION['login']['email'] ?>">
+                            <input id="email" type="text" name="emailUpdate" value="<?php echo $_SESSION['login']['email'] ?>" required>
 
                         </div>
                         <div>
                             <label for="fname">Password : </label>
-                            <input id="fname" type="text" name="password" value="<?php echo $_SESSION['login']['password'] ?>">
+                            <input id="fname" type="text" name="passwordUpdate" value="<?php echo $_SESSION['login']['password'] ?>" required>
 
                         </div>
                     </div>

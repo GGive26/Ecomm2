@@ -1,5 +1,5 @@
 <?php
-include("C:/wamp64/www/Ecom2/models/class/client.php");
+include("C:/wamp64/www/Ecomm2/models/class/client.php");
 
 class modelUtulisateur
 {
@@ -173,13 +173,12 @@ class modelUtulisateur
             $password = $client->getPassword();
             $email = $client->getEmail();
             // Requete preparer avec des marquer interrogatif
-            $sth = $conn->prepare("UPDATE  client SET nomClient=?,prenomClient=?,password=?,email=?;");
-            $sth->execute(array(
-                $nom,
-                $prenom,
-                $password,
-                $email
-            ));
+            $sth = $conn->prepare("UPDATE  client SET nomClient=:nom,prenomClient=:prenom,password=:password,email=:email;");
+            $sth->bindParam(':nom', $nom);
+            $sth->bindParam(':prenom', $prenom);
+            $sth->bindParam(':email', $email);
+            $sth->bindParam(':password', $password);
+            $sth->execute();
         } catch (PDOException $e) {
             echo "Erreur : " . $e->getMessage();
         }

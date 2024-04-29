@@ -1,6 +1,5 @@
 <?php
-
-include("C:/wamp64/www/Ecom2/models/modelUtulisateur.php");
+include("C:/wamp64/www/Ecomm2/models/modelUtulisateur.php");
 
 
 class LoginController
@@ -57,7 +56,7 @@ try {
     if ($_POST != null && empty($_POST['nomUpdate'])) {
         $utilisateurs = $controller->verifyUser($email, $password);
         if ($utilisateurs != false) {
-            include("C:/wamp64/www/Ecom2/views/Acceuil.php");
+            include("C:/wamp64/www/Ecomm2/views/Acceuil.php");
             $_SESSION['auth'] = [
                 'role' =>  $controller->getUserID($email),
                 'email' => $email,

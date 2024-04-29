@@ -1,7 +1,7 @@
 <?php
 class Client
 {
-    private int $id;
+
     private string $nom;
     private string $prenom;
     private string $email;
@@ -9,9 +9,8 @@ class Client
     private int $role_id;
 
 
-    public function __construct($i, $n, $p, $e, $ri, $pass)
+    public function __construct($n, $p, $e, $ri, $pass)
     {
-        $this->id = $i;
         $this->nom = $n;
         $this->prenom = $p;
         $this->email = $e;

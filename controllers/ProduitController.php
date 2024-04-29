@@ -1,5 +1,5 @@
 <?php
-include("C:/wamp64/www/Ecom2/models/modelProduit.php");
+include("C:/wamp64/www/Ecomm2/models/modelProduit.php");
 
 
 class ProduitController
@@ -54,7 +54,7 @@ try {
 
     $utilisateurs = $controller->getProduit();
 
-    include("C:/wamp64/www/Ecom2/views/Acceuil.php");
+    include("C:/wamp64/www/Ecomm2/views/Acceuil.php");
 } catch (PDOException $e) {
     echo "Erreur de connexion: " . $e->getMessage();
 }

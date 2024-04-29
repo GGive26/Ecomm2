@@ -1,5 +1,5 @@
 <?php
-include("C:/wamp64/www/Ecom2/models/modelUtulisateur.php");
+include("C:/wamp64/www/Ecomm2/models/modelUtulisateur.php");
 
 class UserController
 {
@@ -49,7 +49,7 @@ try {
     $email = $_POST["email"];
 
 
-    $user = new Client(0, $nom, $prenom, $email, 0, $password);
+    $user = new Client($nom, $prenom, $email, 0, $password);
 
 
     if ($_POST != null) {
@@ -57,7 +57,7 @@ try {
             $utilisateurs = $controller->addUsers($user);
 
 
-            include("C:/wamp64/www/Ecom2/views/Acceuil.php");
+            include("C:/wamp64/www/Ecomm2/views/Acceuil.php");
 
             $_SESSION['login'] = [
                 'role' =>  0,
