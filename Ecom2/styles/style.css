@@ -1,0 +1,184 @@
+.index {
+  background-image: url("./images/creation-site-e-commerce.jpeg");
+}
+#endP {
+  background-image: url("https://wallpapers.com/images/hd/paypal-neon-light-sign-sd5ymrzpk7rxt53g.jpg");
+  text-align: center;
+}
+.form {
+  text-align: center;
+  background-color: beige;
+}
+.LoginAdmin {
+  background-image: url("./images/Login.webp");
+}
+.SignUp {
+  background-image: url("./images/SignUp.jfif");
+}
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+.ResultLog {
+  background-image: url("./images/bienvenu2.avif");
+}
+.LoginResult {
+  background-image: url("./images/Success.webp");
+  text-align: center;
+  color: white;
+}
+.acceuilClient {
+  background-image: url("./images/AcceuilClient.jpg");
+}
+.acceuilAdmin {
+  background-image: url("./images/AcceuilAdmin.jpg");
+}
+
+/*
+
+le code de Monsieur
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: pink;
+}
+
+.link {
+  margin: 20px;
+  width: fit-content;
+  position: relative;
+  text-decoration: 0;
+  background-color: blue;
+  color: whitesmoke;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+span {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  color: aliceblue;
+}
+
+.products_list {
+  margin: 100px auto;
+  position: relative;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 25px;
+}
+
+.product {
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
+.image_product {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_product img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.content {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  height: fit-content;
+  text-align: center;
+}
+
+.price {
+  margin: 15px 0;
+  font-weight: 400;
+  color: #37a6ff;
+}
+
+.id_product {
+  text-align: center;
+  text-decoration: 0;
+  background-color: #37a6ff;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px 10%;
+  border-radius: 6px;
+}
+
+/* CSS pour  la page panier*/
+
+.panier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.panier img {
+  width: 40px;
+  padding: 8px 0;
+}
+
+.panier section {
+  width: 70%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+th {
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+td {
+  border-top: 0.5px #999;
+  text-align: center;
+  color: #37a6ff;
+}
+
+tr {
+  border-bottom: 0.5px solid #999;
+}
+
+.total th {
+  border: 0;
+  float: left;
+  font-weight: 500;
+  color: #37a6ff;
+  padding: 10px;
+}
